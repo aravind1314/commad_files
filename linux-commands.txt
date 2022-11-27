@@ -23,8 +23,10 @@ find ~(place to find) -name [filename].*(txt,pdf,img....) - finds all files with
 find ~(place to find) -name *.txt - finds all text files in ~
 find ~(place to find) -type d(directory) -name test - finds test directory in ~  
 pwd - prints working dir
-ln -s <file name> <link name> - soft link for file
-ln <file name> <link name> - hard link for file
+ln -s [file name] [link name] - soft link for file
+ln [file name] [link name] - hard link for file
+find -L ~(place to find) -samefile [file name] - finds all symlimks for the file using file name
+find -L ~(place to find) -inum [inode number] - finds all symlimks for the file using inode no of the file
 head [filename] - shows first 10 lines
 head -n 15 [filename] - 15 lines
 tail [filename] - last 10 lines
@@ -39,22 +41,22 @@ wc [filename] - linecount wordcount filesize {-l only linecount} {-w only wordco
  * | tr a-z A-Z - samll to capital
 <some command> & - runs command in background as a job and to continue for typing other commands
  jobs - list all jobs rununing in background
- fg %<job ID> - brings program to foreground
+ fg %[job ID] - brings program to foreground
  ctr+z(stops program) and bg(send program to background)
- kill %<job ID> - kills prgrm in bgs
+ kill %[job ID] - kills prgrm in bgs
 history
 clear
 ctl+r - search commands
 man [command name] - document about command
 whatis [command name]
-which <command name> - gives path of the command
+which [command name] - gives path of the command
 df -T - filesystem type
 df -h - human readable form of utilization FS
 du -h - disk utlization of current dir
 du -h / - du of root dir
 df -i - availabe inodes
 ls -li - list inode numbers
-stat <file/dir name> - detailed info of inodes 
+stat [file/dir name] - detailed info of inodes 
 find . -inum 8800836 –delete - find a file with inode no and delete
 sudo parted -l - file system structure
 cat /etc/fstab - configurable file of filesystem table
