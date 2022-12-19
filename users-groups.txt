@@ -13,6 +13,7 @@ useranme:encrypted password:days since the passwrod was changed(from 1st jan 197
 sudo adduser <username>-create new user
 sudo passwd <username>-change password
 sudo deluser <username>-delete user
+sudo deluser --remove-all-files <username> - remove all files related to user and delete user
 su - <username>-switch user
 su - = log to rootuser
 sudo addgroup <groupname>-create new group
@@ -36,6 +37,7 @@ sudo chown <ownername> <filename> - change owner of the file
 sudo chgrp <groupname> <filename> - chnage group of the file
 sudo chmod (u/g/o)(+/-)(r/w/x) <filename> - add/remove user/group/others permissions
 sudo chmod (+/-)(r/w/x) <filename> - add/remove permissions fr all groups
+sudo chmod (u/g/o/a)=(rwx-) <filename> - set entire permission value for one group or all groups
 sudo chmod (0-7)(0-7)(0-7) <filename> - asssign permissions for all groups in one cmd
 
 

@@ -26,7 +26,7 @@ pwd - prints working dir
 ln -s [file name] [link name] - soft link for file
 ln [file name] [link name] - hard link for file
 find -L ~(place to find) -samefile [file name] - finds all symlimks for the file using file name
-find -L ~(place to find) -inum [inode number] - finds all symlimks for the file using inode no of the file
+find -L ~(place to find) -inum [inode number] - finds all symlimks for the file with inode number
 head [filename] - shows first 10 lines
 head -n 15 [filename] - 15 lines
 tail [filename] - last 10 lines
@@ -68,6 +68,9 @@ ip a - network info
 cat /etc/os-release - os version info
 crontab -l - crontable 
 getconf PAGE_SIZE - gives paze size of the system
+umask -s = display current mask as symbolic value
+umask -p = display current mask as numeric value 
+umask [mask] = set new mask
 lscpu
 lsmem
 
